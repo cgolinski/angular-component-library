@@ -1,6 +1,7 @@
 import { storiesOf } from '@storybook/angular';
 import { Button } from '@storybook/angular/demo';
 import { JbButtonComponent } from 'src/components/jb-button/jb-button.component';
+import { JbCardComponent } from 'src/components/jb-card/jb-card.component';
 
 storiesOf('My Button', module)
   .add('with text', () => ({
@@ -38,6 +39,15 @@ storiesOf('My JB Button', module)
       size: 'small',
     },
   }));
+
+storiesOf('My JB Card', module).add('basic', () => ({
+  component: JbCardComponent,
+  props: {
+    cardTitle: 'This is my JB Card!',
+    image: 'https://placekitten.com/800/800',
+    text: "Here's the rest of the text I'd like to show on the card",
+  },
+}));
 
 //Each story is a single state of your component. In the above case, there are two stories for the demo button component:
 
