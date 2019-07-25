@@ -1,5 +1,6 @@
 import { storiesOf } from '@storybook/angular';
 import { Button } from '@storybook/angular/demo';
+import { JbButtonComponent } from 'src/components/jb-button/jb-button.component';
 
 storiesOf('My Button', module)
   .add('with text', () => ({
@@ -12,6 +13,29 @@ storiesOf('My Button', module)
     component: Button,
     props: {
       text: '😀 😎 👍 💯',
+    },
+  }));
+
+storiesOf('My JB Button', module)
+  .add('large', () => ({
+    component: JbButtonComponent,
+    props: {
+      text: 'This is my large JB Button!',
+      size: 'large',
+    },
+  }))
+  .add('medium', () => ({
+    component: JbButtonComponent,
+    props: {
+      text: 'This is my medium JB Button!',
+      size: 'medium',
+    },
+  }))
+  .add('small', () => ({
+    component: JbButtonComponent,
+    props: {
+      text: 'This is my small JB Button!',
+      size: 'small',
     },
   }));
 
